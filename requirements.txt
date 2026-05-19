@@ -1,0 +1,10 @@
+pandas
+numpy
+pillow
+opencv-python
+scikit-image
+jinja2
+markdown
+openpyxl
+python-dotenv
+rich
