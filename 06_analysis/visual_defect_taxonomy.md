@@ -1,12 +1,12 @@
-# Visual Defect Taxonomy
+# Таксономия визуальных дефектов
 
-| Defect | Description | Possible cause | Fix direction |
+| Defect | Описание | Возможная причина | Направление исправления |
 |---|---|---|---|
-| plastic_skin | Skin looks waxy, airbrushed, or lacks tonal variation. | Too much smoothing or high beauty strength. | Reduce strength, add natural variation, inspect crops. |
-| glassy_eyes | Eyes look wet, glassy, or artificial. | Prompt, enhancer, or video model changes eyes too strongly. | Preserve eyes and reduce eye transformation. |
-| rubber_lips | Lips lose texture or natural edge. | Over-enhancement or bad animation. | Reduce mouth and lip manipulation. |
-| beard_artifacts | Beard looks painted or flickers. | Weak base avatar or video model instability. | Improve still, refine crop, reduce motion. |
-| identity_drift | Face changes across passes. | Too much regeneration. | Lower transformation strength and use selected stills. |
-| overbeautified | Result looks like a generic AI influencer. | Prompt or style too generic. | Use a more specific character brief. |
-| ashy_skin | Dark or warm skin becomes gray or washed out. | Wrong color correction or over-lighting. | Use tone-safe correction. |
-| video_face_slip | Face slides or morphs in video. | Weak still or overly strong motion. | Improve still and reduce motion prompt. |
+| plastic_skin | Кожа выглядит восковой, слишком сглаженной или без тональных вариаций. | Слишком сильное smoothing или beauty strength. | Снизить силу обработки, добавить естественную вариативность, проверить crops. |
+| glassy_eyes | Глаза выглядят мокрыми, стеклянными или искусственными. | Prompt, enhancer или video model слишком сильно меняют глаза. | Сохранять глаза, снизить eye transformation. |
+| rubber_lips | Губы теряют текстуру или естественный контур. | Over-enhancement или плохая анимация. | Снизить mouth/lip manipulation. |
+| beard_artifacts | Борода выглядит нарисованной или мерцает. | Слабый base avatar или нестабильность video model. | Улучшить still, уточнить crop, снизить motion. |
+| identity_drift | Лицо меняется между passes. | Слишком сильная регенерация. | Снизить transformation strength и использовать selected stills. |
+| overbeautified | Результат выглядит как generic AI influencer. | Prompt или style слишком generic. | Сделать character brief более конкретным. |
+| ashy_skin | Темная или теплая кожа становится серой/washed out. | Неверная color correction или over-lighting. | Использовать tone-safe correction. |
+| video_face_slip | Лицо съезжает или морфится в видео. | Слабый still или слишком сильный motion. | Улучшить still и снизить motion prompt. |

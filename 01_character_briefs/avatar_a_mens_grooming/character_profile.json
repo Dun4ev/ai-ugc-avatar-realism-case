@@ -1,0 +1,30 @@
+{
+  "avatar_id": "avatar_a_mens_grooming",
+  "character_name": "Milan",
+  "niche": "men's grooming",
+  "age_range": "32-38",
+  "skin_tone": "unknown",
+  "face_shape": "unknown",
+  "hair": "short groomed hair",
+  "facial_hair": "short well-groomed beard",
+  "brand_role": "premium but approachable grooming advisor",
+  "visual_style": "clean grooming routine, calm masculine skincare context, natural portrait realism",
+  "personality": "calm, competent, minimal, trustworthy",
+  "source_reference": "02_source_data/public_references/pexels_unsplash/mens_grooming_pexels_001.jpg",
+  "visual_risks": [
+    "plastic skin",
+    "fake beard texture",
+    "glassy eyes",
+    "over-polished face",
+    "AI influencer look",
+    "identity drift during realism passes"
+  ],
+  "success_criteria": [
+    "natural skin finish",
+    "realistic eyes",
+    "stable beard texture",
+    "premium grooming aesthetic",
+    "ready for short UGC video test"
+  ],
+  "notes": "Initial source is a user-provided Pexels men's grooming portrait. Original Pexels URL must be recorded before publication."
+}

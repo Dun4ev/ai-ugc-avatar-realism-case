@@ -1,0 +1,11 @@
+avatar_id,image_label,zone,source_file,crop_file,box_pixels,box_relative
+avatar_a_mens_grooming,base,skin_forehead,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,06_analysis/crops/avatar_a_mens_grooming/base_skin_forehead.jpg,"1440,2040,2640,2820","0.3600,0.3400,0.6600,0.4700"
+avatar_a_mens_grooming,base,skin_cheeks,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,06_analysis/crops/avatar_a_mens_grooming/base_skin_cheeks.jpg,"800,3480,3280,4380","0.2000,0.5800,0.8200,0.7300"
+avatar_a_mens_grooming,base,eyes,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,06_analysis/crops/avatar_a_mens_grooming/base_eyes.jpg,"720,2580,3040,3420","0.1800,0.4300,0.7600,0.5700"
+avatar_a_mens_grooming,base,lips,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,06_analysis/crops/avatar_a_mens_grooming/base_lips.jpg,"1400,4200,2640,4800","0.3500,0.7000,0.6600,0.8000"
+avatar_a_mens_grooming,base,hair_beard,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,06_analysis/crops/avatar_a_mens_grooming/base_hair_beard.jpg,"1000,3840,3120,5400","0.2500,0.6400,0.7800,0.9000"
+avatar_a_mens_grooming,final_realism_001,skin_forehead,04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg,06_analysis/crops/avatar_a_mens_grooming/final_realism_001_skin_forehead.jpg,"1440,2040,2640,2820","0.3600,0.3400,0.6600,0.4700"
+avatar_a_mens_grooming,final_realism_001,skin_cheeks,04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg,06_analysis/crops/avatar_a_mens_grooming/final_realism_001_skin_cheeks.jpg,"800,3480,3280,4380","0.2000,0.5800,0.8200,0.7300"
+avatar_a_mens_grooming,final_realism_001,eyes,04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg,06_analysis/crops/avatar_a_mens_grooming/final_realism_001_eyes.jpg,"720,2580,3040,3420","0.1800,0.4300,0.7600,0.5700"
+avatar_a_mens_grooming,final_realism_001,lips,04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg,06_analysis/crops/avatar_a_mens_grooming/final_realism_001_lips.jpg,"1400,4200,2640,4800","0.3500,0.7000,0.6600,0.8000"
+avatar_a_mens_grooming,final_realism_001,hair_beard,04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg,06_analysis/crops/avatar_a_mens_grooming/final_realism_001_hair_beard.jpg,"1000,3840,3120,5400","0.2500,0.6400,0.7800,0.9000"

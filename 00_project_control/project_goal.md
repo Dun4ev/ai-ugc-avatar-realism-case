@@ -1,5 +1,5 @@
-# Project Goal
+# Цель проекта
 
-Create a personal portfolio case study showing a structured AI avatar realism pipeline for beauty, skincare and men's grooming UGC content.
+Создать личный portfolio case study, который показывает структурированный pipeline повышения реалистичности AI-аватаров для beauty, skincare и men's grooming UGC-контента.
 
-The project should demonstrate controlled visual diagnosis, realism passes, traceable experiments and honest limitations.
+Проект должен показать управляемую визуальную диагностику, realism passes, отслеживаемые эксперименты и честные ограничения.

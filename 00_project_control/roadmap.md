@@ -1,32 +1,32 @@
 # Roadmap
 
-## Phase 1: Scaffold
+## Фаза 1: Scaffold
 
-- Create repository structure.
-- Add project instructions and setup files.
-- Add CSV registers.
-- Add structure validator.
+- Создать структуру репозитория.
+- Добавить проектные инструкции и setup-файлы.
+- Добавить CSV-регистры.
+- Добавить валидатор структуры.
 
-## Phase 2: Source Materials
+## Фаза 2: Source Materials
 
-- Collect public-safe reference images.
-- Register sources and license notes.
-- Create first contact sheets.
+- Собрать public-safe reference images.
+- Зарегистрировать источники и license notes.
+- Создать первые contact sheets.
 
-## Phase 3: Character Briefs
+## Фаза 3: Character Briefs
 
-- Define Avatar A: Men's Grooming Advisor.
-- Define Avatar B: Skincare Routine Creator.
-- Create prompts and profiles.
+- Описать Avatar A: Men's Grooming Advisor.
+- Описать Avatar B: Skincare Routine Creator.
+- Создать prompts и profiles.
 
-## Phase 4: Visual Experiments
+## Фаза 4: Visual Experiments
 
-- Generate or import base avatar candidates.
-- Run realism passes.
-- Extract face crops and compare failure modes.
+- Сгенерировать или импортировать base avatar candidates.
+- Провести realism passes.
+- Извлечь face crops и сравнить failure modes.
 
-## Phase 5: Report and Publication
+## Фаза 5: Report and Publication
 
-- Write `07_report/report.md`.
-- Build `07_report/report.html`.
-- Prepare `08_site/index.html`.
+- Написать `07_report/report.md`.
+- Собрать `07_report/report.html`.
+- Подготовить `08_site/index.html`.

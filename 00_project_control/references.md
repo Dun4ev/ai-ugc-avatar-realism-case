@@ -1,8 +1,8 @@
-# References
+# Источники и ссылки
 
-Use this file to track official docs, licenses, datasets and service notes used by the project.
+Использовать этот файл для учета официальной документации, лицензий, датасетов и заметок по сервисам, которые реально используются в проекте.
 
-## Starting links
+## Стартовые ссылки
 
 - ComfyUI macOS Desktop documentation: https://docs.comfy.org/installation/desktop/macos
 - ComfyUI system requirements: https://docs.comfy.org/installation/system_requirements

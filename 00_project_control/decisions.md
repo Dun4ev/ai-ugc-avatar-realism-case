@@ -1,6 +1,6 @@
-# Decisions
+# Решения
 
-| Date | Decision | Reason | Status |
+| Дата | Решение | Причина | Статус |
 |---|---|---|---|
-| 2026-05-19 | Use the current folder as the project root. | Keeps the repository simple and avoids an extra nested project directory. | accepted |
-| 2026-05-19 | Start with scaffold and validation only. | Avoids fake results and keeps the first milestone verifiable. | accepted |
+| 2026-05-19 | Использовать текущую папку как корень проекта. | Это сохраняет структуру простой и не создает лишнюю вложенную директорию. | принято |
+| 2026-05-19 | Начать только со scaffold и validation. | Это не создает fake results и делает первый milestone проверяемым. | принято |

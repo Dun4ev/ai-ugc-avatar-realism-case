@@ -1,7 +1,7 @@
-# Open Questions
+# Открытые вопросы
 
-| ID | Question | Impact | Status |
+| ID | Вопрос | Влияние | Статус |
 |---|---|---|---|
-| Q001 | Which external image-to-video service will be used for the first test? | Affects video test workflow and budget. | open |
-| Q002 | Which image sources will be public-safe for the final report? | Affects publication rights and asset selection. | open |
-| Q003 | Will ComfyUI be used locally, in cloud GPU, or only documented as optional? | Affects workflow files and tooling notes. | open |
+| Q001 | Какой внешний image-to-video сервис использовать для первого теста? | Влияет на video test workflow и бюджет. | открыт |
+| Q002 | Какие источники изображений будут безопасны для публичного отчета? | Влияет на права публикации и выбор ассетов. | открыт |
+| Q003 | Использовать ComfyUI локально, через cloud GPU или пока только документировать как опцию? | Влияет на workflow files и tooling notes. | открыт |

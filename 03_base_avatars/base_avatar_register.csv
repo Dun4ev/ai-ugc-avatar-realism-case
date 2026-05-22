@@ -1,1 +1,3 @@
 avatar_id,avatar_name,niche,tool_used,prompt_file,output_file,selected,reason,notes
+avatar_a_mens_grooming,Milan,men's grooming,user_provided_pexels_reference,01_character_briefs/avatar_a_mens_grooming/prompt_history.md,03_base_avatars/avatar_a_mens_grooming/selected/base.jpg,yes,Initial working portrait for men's grooming pipeline testing,Source URL: https://www.pexels.com/ru-ru/photo/11772165/
+avatar_b_skincare_creator,Sofia,sensorial skincare,user_provided_pexels_reference,01_character_briefs/avatar_b_skincare_creator/prompt_history.md,03_base_avatars/avatar_b_skincare_creator/selected/base.jpg,yes,Initial working portrait for skincare creator pipeline testing,Source URL: https://www.pexels.com/ru-ru/photo/4575002/

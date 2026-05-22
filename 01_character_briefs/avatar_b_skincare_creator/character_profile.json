@@ -1,0 +1,30 @@
+{
+  "avatar_id": "avatar_b_skincare_creator",
+  "character_name": "Sofia",
+  "niche": "sensorial skincare",
+  "age_range": "24-32",
+  "skin_tone": "light",
+  "face_shape": "soft oval",
+  "hair": "slicked back light hair, clean beauty styling",
+  "brand_role": "skincare routine creator",
+  "visual_style": "clean beauty close-up, soft studio light, premium skincare portrait, natural skin texture",
+  "personality": "gentle, precise, confident, sensory",
+  "source_reference": "02_source_data/public_references/pexels_unsplash/skincare_creator_pexels_001.jpg",
+  "visual_risks": [
+    "waxy skin",
+    "over-glowing face",
+    "glassy eyes",
+    "rubber lips",
+    "too perfect beauty retouch look",
+    "identity drift during realism passes"
+  ],
+  "success_criteria": [
+    "soft but realistic skin",
+    "visible natural tonal variation",
+    "non-glassy eyes",
+    "natural lips",
+    "clean beauty aesthetic",
+    "ready for skincare UGC video test"
+  ],
+  "notes": "Initial source is a user-provided Pexels skincare/beauty close-up portrait. Source URL: https://www.pexels.com/ru-ru/photo/4575002/"
+}
