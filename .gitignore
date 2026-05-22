@@ -24,6 +24,10 @@ models/
 *.mkv
 *.webm
 
+# Published case-study videos for GitHub Pages
+!08_site/assets/video/
+!08_site/assets/video/*.mp4
+
 # Temporary files
 tmp/
 .cache/
