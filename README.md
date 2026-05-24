@@ -4,6 +4,11 @@
 
 Проект фокусируется на том, как сделать AI-generated avatar stills более пригодными для коротких UGC-style video tests через диагностику и улучшение реалистичности кожи, глаз, губ, волос и бороды до image-to-video генерации.
 
+## Публичная версия
+
+- GitHub Pages: https://dun4ev.github.io/ai-ugc-avatar-realism-case/
+- Repository: https://github.com/Dun4ev/ai-ugc-avatar-realism-case
+
 ## Цели
 
 - Создать два направления кейса: men's grooming и skincare routine creator.

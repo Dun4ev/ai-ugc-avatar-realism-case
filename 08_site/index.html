@@ -77,7 +77,7 @@ h3 {
   font-weight: 700;
 }
 
-p, ul, ol, table {
+p, ul, ol, .table-wrap {
   margin: 0 0 16px;
 }
 
@@ -131,20 +131,30 @@ video {
 }
 
 table {
+  min-width: 100%;
   width: 100%;
+  margin: 0;
   border-collapse: collapse;
-  overflow: hidden;
+  border: 0;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: 0 10px 28px rgba(23, 32, 36, 0.06);
-  font-size: 14px;
 }
 
 th, td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 td + td,
@@ -165,6 +175,13 @@ tr:last-child td {
 
 tbody tr:nth-child(even) {
   background: #fafbfb;
+}
+
+td code,
+th code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .meta {
@@ -224,7 +241,7 @@ tbody tr:nth-child(even) {
   h1 { font-size: 31px; }
   h2 { font-size: 21px; }
   .hero-subtitle { font-size: 16px; }
-  table { display: block; overflow-x: auto; }
+  table { min-width: 680px; }
 }</style>
 </head>
 <body>
@@ -360,6 +377,7 @@ tbody tr:nth-child(even) {
 <h2>9. Scoring</h2>
 <h3>Avatar A</h3>
 <p>Scoring source: user visual review after crop correction.</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Metric</th>
@@ -398,6 +416,7 @@ tbody tr:nth-child(even) {
 <td>Realism pass принят для черновика кейса.</td>
 </tr>
 </tbody></table>
+</div>
 <p>CSV log:</p>
 <ul>
 <li><code>04_realism_passes/realism_run_log.csv</code></li>
@@ -406,6 +425,7 @@ tbody tr:nth-child(even) {
 <p><code>realism_001</code> принят как <code>accepted_for_case_draft</code>.</p>
 <h3>Avatar B</h3>
 <p>Scoring source: user visual review after crop comparison.</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Metric</th>
@@ -444,6 +464,7 @@ tbody tr:nth-child(even) {
 <td>Realism pass принят для черновика кейса.</td>
 </tr>
 </tbody></table>
+</div>
 <p>CSV log:</p>
 <ul>
 <li><code>04_realism_passes/realism_run_log.csv</code></li>
@@ -457,6 +478,7 @@ tbody tr:nth-child(even) {
 <li><code>06_analysis/lab_color_stats/avatar_b_skincare_creator_color_stats.csv</code></li>
 </ul>
 <p>Краткое наблюдение: <code>final_realism_001</code> стал немного темнее во всех crop-зонах, при этом saturation немного выросла почти везде.</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Zone</th>
@@ -496,8 +518,10 @@ tbody tr:nth-child(even) {
 <td>+0.0042</td>
 </tr>
 </tbody></table>
+</div>
 <p>Ограничение: это RGB/HSV/luminance statistics, а не полноценный LAB analysis. Таблица показывает color/tone shift, но не заменяет visual scoring.</p>
 <p>Для Avatar B <code>final_realism_001</code> стал светлее и насыщеннее во всех crop-зонах.</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Zone</th>
@@ -537,6 +561,7 @@ tbody tr:nth-child(even) {
 <td>+0.0649</td>
 </tr>
 </tbody></table>
+</div>
 <h2>11. Что сработало</h2>
 <ul>
 <li>Source image теперь отслеживается через <code>dataset_register.csv</code>.</li>
@@ -559,6 +584,7 @@ tbody tr:nth-child(even) {
 </ul>
 <h2>13. Video tests</h2>
 <p>Подготовлены входные файлы для короткого image-to-video теста:</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Video run</th>
@@ -583,10 +609,12 @@ tbody tr:nth-child(even) {
 <td>accepted_for_case_draft</td>
 </tr>
 </tbody></table>
+</div>
 <p>Output videos:</p>
 <video controls preload="metadata" src="assets/video/avatar_a_video_001.mp4">Avatar A video test</video>
 <video controls preload="metadata" src="assets/video/avatar_b_video_001.mp4">Avatar B video test</video>
 <p>Technical metadata:</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Video run</th>
@@ -611,7 +639,9 @@ tbody tr:nth-child(even) {
 <td>H.264</td>
 </tr>
 </tbody></table>
+</div>
 <p>Video scoring:</p>
+<div class="table-wrap">
 <table>
 <thead><tr>
 <th>Video run</th>
@@ -645,6 +675,7 @@ tbody tr:nth-child(even) {
 <td>accepted_for_case_draft</td>
 </tr>
 </tbody></table>
+</div>
 <p>Инструмент генерации: Magnific, модель Kling 3.0, <code>www.magnific.com</code>.</p>
 <h2>14. Следующие шаги</h2>
 <ol>

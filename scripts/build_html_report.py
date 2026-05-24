@@ -92,7 +92,7 @@ h3 {
   font-weight: 700;
 }
 
-p, ul, ol, table {
+p, ul, ol, .table-wrap {
   margin: 0 0 16px;
 }
 
@@ -146,20 +146,30 @@ video {
 }
 
 table {
+  min-width: 100%;
   width: 100%;
+  margin: 0;
   border-collapse: collapse;
-  overflow: hidden;
+  border: 0;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: 0 10px 28px rgba(23, 32, 36, 0.06);
-  font-size: 14px;
 }
 
 th, td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 td + td,
@@ -180,6 +190,13 @@ tr:last-child td {
 
 tbody tr:nth-child(even) {
   background: #fafbfb;
+}
+
+td code,
+th code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .meta {
@@ -239,7 +256,7 @@ tbody tr:nth-child(even) {
   h1 { font-size: 31px; }
   h2 { font-size: 21px; }
   .hero-subtitle { font-size: 16px; }
-  table { display: block; overflow-x: auto; }
+  table { min-width: 680px; }
 }
 """.strip()
 
@@ -293,7 +310,7 @@ def table_to_html(lines: list[str], index: int) -> tuple[str, int]:
         parts.extend(f"<td>{inline_markdown(cell)}</td>" for cell in row)
         parts.append("</tr>")
     parts.append("</tbody></table>")
-    return "\n".join(parts), index
+    return '<div class="table-wrap">\n' + "\n".join(parts) + "\n</div>", index
 
 
 def list_to_html(lines: list[str], index: int, ordered: bool) -> tuple[str, int]:
