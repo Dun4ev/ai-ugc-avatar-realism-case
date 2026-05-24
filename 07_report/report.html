@@ -253,47 +253,69 @@ th code {
       <p class="hero-subtitle">Structured realism pipeline with source tracking, ON1 passes, crop analysis, scoring and Magnific/Kling video tests.</p>
     </section>
     <article class="content">
-      <h2>1. Цель</h2>
-<p>Проверить управляемый workflow улучшения реалистичности AI/UGC portrait still для men&#x27;s grooming кейса: от source reference и base still до realism pass, crop-проверки, scoring и подготовки материалов для будущего image-to-video теста.</p>
-<h2>2. Почему этот кейс важен</h2>
-<p>Для UGC-style avatar content недостаточно получить визуально приятный portrait. Перед image-to-video важно отдельно проверить зоны, которые чаще всего ломают реализм:</p>
+      <h2>1. Executive Summary</h2>
+<p>This case study documents a traceable workflow for improving and evaluating AI/UGC avatar realism for beauty, skincare, and men&#x27;s grooming content.</p>
+<p>The project includes:</p>
 <ul>
-<li>кожа;</li>
-<li>глаза;</li>
-<li>губы;</li>
-<li>волосы и борода;</li>
+<li>2 avatar tracks: men&#x27;s grooming and skincare creator.</li>
+<li>2 ON1 Photo RAW 2025 realism passes.</li>
+<li>Face-zone crop comparison for skin, eyes, lips, and hair/beard or hairline.</li>
+<li>Manual realism scoring on a 1-5 scale.</li>
+<li>2 image-to-video tests generated with Magnific / Kling 3.0.</li>
+<li>A published static HTML case study.</li>
+</ul>
+<p>The goal is not to claim a production-ready avatar system. The goal is to show a structured, inspectable process for avatar realism evaluation.</p>
+<h2>2. Why This Case Matters</h2>
+<p>UGC-style AI avatars often look convincing in a full-frame still but fail in specific face zones or during motion. Before moving to image-to-video, the following areas need separate inspection:</p>
+<ul>
+<li>skin texture;</li>
+<li>eyes;</li>
+<li>lips;</li>
+<li>hair, beard, or hairline;</li>
 <li>identity consistency.</li>
 </ul>
-<p>Цель этого проекта — показать не только финальную картинку, но и контролируемый pipeline: source tracking, tool settings, crop comparison, scoring и limitations.</p>
-<h2>3. Целевая ниша</h2>
-<p>Первый рабочий трек:</p>
+<p>This project focuses on the workflow: source tracking, tool settings, crop comparison, manual scoring, video tests, and honest limitations.</p>
+<h2>3. Target Use Cases</h2>
+<h3>Avatar A: Men&#x27;s Grooming Advisor</h3>
 <ul>
-<li>Avatar A: Men&#x27;s Grooming Advisor</li>
-<li>Niche: men&#x27;s grooming</li>
-<li>Use cases: face wash, beard care, moisturizer, shaving, fragrance/body care</li>
+<li>Niche: men&#x27;s grooming.</li>
+<li>Example use cases: face wash, beard care, moisturizer, shaving, fragrance, body care.</li>
 </ul>
-<p>Avatar B для skincare routine creator добавлен на уровне source/base, первого ON1 realism pass и user scoring.</p>
-<h2>4. Метод</h2>
-<p>Текущий pipeline:</p>
+<h3>Avatar B: Skincare Routine Creator</h3>
+<ul>
+<li>Niche: skincare and beauty UGC.</li>
+<li>Example use cases: skincare routine, moisturizer, cleanser, serum, beauty education.</li>
+</ul>
+<h2>4. Method</h2>
+<p>The workflow used in this case:</p>
 <ol>
-<li>Source reference из Pexels.</li>
-<li>Base still в <code>03_base_avatars/</code>.</li>
-<li>Realism pass через ON1 Photo RAW 2025.</li>
-<li>Full image comparison grid.</li>
-<li>Crop extraction по зонам лица.</li>
-<li>Crop comparison grid.</li>
-<li>User visual scoring по шкале 1-5.</li>
+<li>Track public source references and license notes.</li>
+<li>Select a base avatar still.</li>
+<li>Create a realism pass with ON1 Photo RAW 2025.</li>
+<li>Generate full-image comparison grids.</li>
+<li>Extract face-zone crops.</li>
+<li>Generate crop comparison grids.</li>
+<li>Score realism manually on a 1-5 scale.</li>
+<li>Prepare image-to-video prompts and input stills.</li>
+<li>Generate short video tests with Magnific / Kling 3.0.</li>
+<li>Score video stability manually on a 1-5 scale.</li>
 </ol>
-<p>Avatar A и Avatar B уже прошли шаги до user visual scoring.</p>
-<h2>5. Источник изображения</h2>
-<p>Source reference:</p>
+<h2>5. Source References and License Notes</h2>
+<h3>Avatar A</h3>
 <ul>
 <li>File: <code>02_source_data/public_references/pexels_unsplash/mens_grooming_pexels_001.jpg</code></li>
 <li>Source: Pexels</li>
 <li>Source URL: https://www.pexels.com/ru-ru/photo/11772165/</li>
 <li>License note: Pexels license checked on 2026-05-20.</li>
 </ul>
-<p>Pexels позволяет бесплатное использование и модификацию фото; attribution is not required but appreciated. Важное ограничение: нельзя использовать человека на фото так, будто он endorses продукт или бренд.</p>
+<h3>Avatar B</h3>
+<ul>
+<li>File: <code>02_source_data/public_references/pexels_unsplash/skincare_creator_pexels_001.jpg</code></li>
+<li>Source: Pexels</li>
+<li>Source URL: https://www.pexels.com/ru-ru/photo/4575002/</li>
+<li>License note: Pexels license checked on 2026-05-20.</li>
+</ul>
+<p>Important limitation: the people in the reference images should not be presented as endorsing any product, brand, or service.</p>
 <h2>6. Avatar A: Men&#x27;s Grooming Advisor</h2>
 <p>Character files:</p>
 <ul>
@@ -309,13 +331,12 @@ th code {
 <ul>
 <li><code>04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg</code></li>
 </ul>
-<p>Tool:</p>
+<p>Tooling:</p>
 <ul>
-<li>ON1 Photo RAW 2025</li>
+<li>Tool: ON1 Photo RAW 2025</li>
 <li>Settings file: <code>09_workflows/on1/avatar_a_realism_001_on1_photo_raw_2025.onp</code></li>
 <li>Readable settings summary: <code>09_workflows/on1/on1_realism_001_settings_summary.md</code></li>
 </ul>
-<p>Key readable ON1 settings include Brilliance AI - Люди, increased structure/clarity, mild vibrance/color/tone adjustments, reduced highlights/whites and small exposure/contrast corrections.</p>
 <h2>7. Avatar B: Skincare Routine Creator</h2>
 <p>Character files:</p>
 <ul>
@@ -323,41 +344,26 @@ th code {
 <li><code>01_character_briefs/avatar_b_skincare_creator/character_profile.json</code></li>
 <li><code>01_character_briefs/avatar_b_skincare_creator/prompt_history.md</code></li>
 </ul>
-<p>Source reference:</p>
-<ul>
-<li>File: <code>02_source_data/public_references/pexels_unsplash/skincare_creator_pexels_001.jpg</code></li>
-<li>Source: Pexels</li>
-<li>Source URL: https://www.pexels.com/ru-ru/photo/4575002/</li>
-<li>License note: Pexels license checked on 2026-05-20.</li>
-</ul>
 <p>Base avatar:</p>
 <ul>
 <li><code>03_base_avatars/avatar_b_skincare_creator/selected/base.jpg</code></li>
-</ul>
-<p>Current status:</p>
-<ul>
-<li>source/base stage complete;</li>
-<li>realism pass 001 complete;</li>
-<li>crop analysis complete;</li>
-<li>scoring complete.</li>
 </ul>
 <p>Realism output:</p>
 <ul>
 <li><code>04_realism_passes/avatar_b_skincare_creator/final_stills/final_realism_001.jpg</code></li>
 </ul>
-<p>Tool:</p>
+<p>Tooling:</p>
 <ul>
-<li>ON1 Photo RAW 2025</li>
+<li>Tool: ON1 Photo RAW 2025</li>
 <li>Settings file: <code>09_workflows/on1/avatar_b_realism_001_on1_photo_raw_2025.onp</code></li>
 <li>Readable settings summary: <code>09_workflows/on1/on1_avatar_b_realism_001_settings_summary.md</code></li>
 </ul>
-<p>Key readable ON1 settings include Brilliance AI - Люди, increased exposure, reduced dehaze, noise reduction, enabled auto tone/color and reduced highlights/whites.</p>
-<h2>8. Visual comparison</h2>
-<p>Full image comparison:</p>
+<h2>8. Visual Comparison</h2>
+<p>Avatar A full-image comparison:</p>
 <img src="assets/images/avatar_a_mens_grooming_base_vs_realism_001.jpg" alt="Avatar A base vs realism">
-<p>Crop comparison:</p>
+<p>Avatar A crop comparison:</p>
 <img src="assets/images/avatar_a_mens_grooming_crop_comparison_001.jpg" alt="Avatar A crop comparison">
-<p>Avatar B full image comparison:</p>
+<p>Avatar B full-image comparison:</p>
 <img src="assets/images/avatar_b_skincare_creator_base_vs_realism_001.jpg" alt="Avatar B base vs realism">
 <p>Avatar B crop comparison:</p>
 <img src="assets/images/avatar_b_skincare_creator_crop_comparison_001.jpg" alt="Avatar B crop comparison">
@@ -369,14 +375,10 @@ th code {
 <li><code>lips</code></li>
 <li><code>hair_beard</code></li>
 </ul>
-<p>Crop manifests:</p>
-<ul>
-<li><code>06_analysis/crops/avatar_a_mens_grooming/crop_manifest.csv</code></li>
-<li><code>06_analysis/crops/avatar_b_skincare_creator/crop_manifest.csv</code></li>
-</ul>
-<h2>9. Scoring</h2>
+<p>For Avatar B, the <code>hair_beard</code> zone is used as a shared scoring column and represents hair/hairline.</p>
+<h2>9. Still-Image Realism Scoring</h2>
+<p>Scoring source: manual visual review after crop correction and crop comparison.</p>
 <h3>Avatar A</h3>
-<p>Scoring source: user visual review after crop correction.</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -388,43 +390,37 @@ th code {
 <tr>
 <td>skin_realism</td>
 <td>4</td>
-<td>Кожа стала достаточно хорошей для case draft.</td>
+<td>Skin is strong enough for a case-study draft.</td>
 </tr>
 <tr>
 <td>eye_realism</td>
 <td>3</td>
-<td>Глаза приемлемы, но не strongest improvement area.</td>
+<td>Eyes are acceptable but remain a potential improvement area.</td>
 </tr>
 <tr>
 <td>lips_realism</td>
 <td>4</td>
-<td>Губы оценены как хорошие для case draft.</td>
+<td>Lips are strong enough for a case-study draft.</td>
 </tr>
 <tr>
 <td>hair_beard_realism</td>
 <td>3</td>
-<td>Борода приемлема, но требует дальнейшего улучшения.</td>
+<td>Beard is acceptable but can be improved in a second pass.</td>
 </tr>
 <tr>
 <td>identity_consistency</td>
 <td>5</td>
-<td>Личность сохранена очень хорошо.</td>
+<td>Identity is preserved very well.</td>
 </tr>
 <tr>
 <td>overall_score</td>
 <td>4</td>
-<td>Realism pass принят для черновика кейса.</td>
+<td>Accepted for the case-study draft.</td>
 </tr>
 </tbody></table>
 </div>
-<p>CSV log:</p>
-<ul>
-<li><code>04_realism_passes/realism_run_log.csv</code></li>
-</ul>
-<p>Verdict:</p>
-<p><code>realism_001</code> принят как <code>accepted_for_case_draft</code>.</p>
+<p>Verdict: <code>accepted_for_case_draft</code></p>
 <h3>Avatar B</h3>
-<p>Scoring source: user visual review after crop comparison.</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -436,48 +432,47 @@ th code {
 <tr>
 <td>skin_realism</td>
 <td>4</td>
-<td>Кожа оценена как хорошая для case draft.</td>
+<td>Skin is strong enough for a case-study draft.</td>
 </tr>
 <tr>
 <td>eye_realism</td>
 <td>5</td>
-<td>Глаза — самая сильная зона текущего pass.</td>
+<td>Eyes are the strongest area of this pass.</td>
 </tr>
 <tr>
 <td>lips_realism</td>
 <td>4</td>
-<td>Губы оценены как хорошие для case draft.</td>
+<td>Lips are strong enough for a case-study draft.</td>
 </tr>
 <tr>
 <td>hair_beard_realism</td>
 <td>4</td>
-<td>Для Avatar B это hair/hairline зона, колонка оставлена общей для CSV.</td>
+<td>For this avatar, this represents hair/hairline.</td>
 </tr>
 <tr>
 <td>identity_consistency</td>
 <td>4</td>
-<td>Личность сохранена хорошо.</td>
+<td>Identity is preserved well.</td>
 </tr>
 <tr>
 <td>overall_score</td>
 <td>4</td>
-<td>Realism pass принят для черновика кейса.</td>
+<td>Accepted for the case-study draft.</td>
 </tr>
 </tbody></table>
 </div>
+<p>Verdict: <code>accepted_for_case_draft</code></p>
 <p>CSV log:</p>
 <ul>
 <li><code>04_realism_passes/realism_run_log.csv</code></li>
 </ul>
-<p>Verdict:</p>
-<p><code>avatar_b_realism_001</code> принят как <code>accepted_for_case_draft</code>.</p>
-<h2>10. Color / tone statistics</h2>
-<p>Stats file:</p>
+<h2>10. Color and Tone Statistics</h2>
+<p>Stats files:</p>
 <ul>
 <li><code>06_analysis/lab_color_stats/avatar_a_mens_grooming_color_stats.csv</code></li>
 <li><code>06_analysis/lab_color_stats/avatar_b_skincare_creator_color_stats.csv</code></li>
 </ul>
-<p>Краткое наблюдение: <code>final_realism_001</code> стал немного темнее во всех crop-зонах, при этом saturation немного выросла почти везде.</p>
+<p>Avatar A: <code>final_realism_001</code> became slightly darker across all crop zones, while saturation increased slightly in most zones.</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -519,8 +514,7 @@ th code {
 </tr>
 </tbody></table>
 </div>
-<p>Ограничение: это RGB/HSV/luminance statistics, а не полноценный LAB analysis. Таблица показывает color/tone shift, но не заменяет visual scoring.</p>
-<p>Для Avatar B <code>final_realism_001</code> стал светлее и насыщеннее во всех crop-зонах.</p>
+<p>Avatar B: <code>final_realism_001</code> became brighter and more saturated across all crop zones.</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -562,28 +556,15 @@ th code {
 </tr>
 </tbody></table>
 </div>
-<h2>11. Что сработало</h2>
+<p>Limitation: these are RGB/HSV/luminance statistics, not a full LAB analysis. They help identify color and tone shifts but do not replace visual scoring.</p>
+<h2>11. Video Tests</h2>
+<p>Image-to-video tool:</p>
 <ul>
-<li>Source image теперь отслеживается через <code>dataset_register.csv</code>.</li>
-<li>Pexels URL и license note добавлены.</li>
-<li>ON1 preset сохранен как workflow artifact.</li>
-<li>Crop extraction позволяет оценивать не только full image, но и отдельные зоны лица.</li>
-<li>Crop comparison grid удобна для scoring и будущего отчета.</li>
-<li>Identity consistency высокая: итоговый still сохраняет исходное лицо.</li>
-<li>Avatar B source/base trail создан.</li>
-<li>Avatar B ON1 realism pass, comparison grid, crop grid и color/tone stats созданы.</li>
+<li>Platform: Magnific</li>
+<li>Model: Kling 3.0</li>
+<li>Website: <code>www.magnific.com</code></li>
 </ul>
-<h2>12. Что пока не сработало / ограничения</h2>
-<ul>
-<li>Точный visual improvement не автоматизирован; scoring пока ручной.</li>
-<li>Eyes и hair/beard получили score <code>3</code>, значит эти зоны остаются кандидатами на следующий realism pass.</li>
-<li>Image-to-video outputs добавлены и получили user scoring.</li>
-<li>Для обоих аватаров есть realism scoring и video scoring.</li>
-<li>Нет полноценного LAB analysis; текущая таблица использует RGB/HSV/luminance statistics.</li>
-<li>Не нужно утверждать, что этот результат commercial-ready; текущий статус — case draft.</li>
-</ul>
-<h2>13. Video tests</h2>
-<p>Подготовлены входные файлы для короткого image-to-video теста:</p>
+<p>Prepared inputs:</p>
 <div class="table-wrap">
 <table>
 <thead><tr>
@@ -676,15 +657,26 @@ th code {
 </tr>
 </tbody></table>
 </div>
-<p>Инструмент генерации: Magnific, модель Kling 3.0, <code>www.magnific.com</code>.</p>
-<h2>14. Следующие шаги</h2>
-<ol>
-<li>При необходимости сделать второй realism pass для Avatar A: focus on eyes and beard.</li>
-<li>При необходимости сделать второй realism pass для Avatar B: focus on skin texture balance and identity consistency.</li>
-<li>Выполнить финальную проверку публикации.</li>
-</ol>
-<h2>15. Текущий статус</h2>
-<p>Avatar A имеет полный минимальный case trail:</p>
+<h2>12. What Worked</h2>
+<ul>
+<li>Source images are tracked through <code>dataset_register.csv</code>.</li>
+<li>Pexels URLs and license notes are documented.</li>
+<li>ON1 settings are saved as workflow artifacts.</li>
+<li>Crop extraction made it possible to inspect specific face zones instead of relying only on full-frame impressions.</li>
+<li>Crop comparison grids made manual scoring easier and more transparent.</li>
+<li>Both video outputs were accepted for the case-study draft.</li>
+</ul>
+<h2>13. Limitations</h2>
+<ul>
+<li>The scoring is manual and subjective.</li>
+<li>The color/tone analysis is simple RGB/HSV/luminance analysis, not a full LAB workflow.</li>
+<li>Avatar A eyes and beard scored lower than other areas, so they remain candidates for a second realism pass.</li>
+<li>The case should not be described as a commercial-ready avatar system.</li>
+<li>The source portraits are public references; they should not be used to imply endorsement by the people shown.</li>
+</ul>
+<h2>14. Current Status</h2>
+<p>This project is complete as a portfolio-grade case study.</p>
+<p>Avatar A includes:</p>
 <ul>
 <li>source reference;</li>
 <li>base still;</li>
@@ -692,11 +684,25 @@ th code {
 <li>ON1 settings;</li>
 <li>full comparison;</li>
 <li>crop comparison;</li>
-<li>scoring;</li>
-<li>limitations.</li>
+<li>still-image scoring;</li>
+<li>video test;</li>
+<li>video scoring.</li>
 </ul>
-<p>Avatar B имеет source/base trail, ON1 realism pass, comparison/crop artifacts, color/tone stats и visual scoring.</p>
-<p>Этого достаточно для расширенного черновика отчета. Для финальной публикации осталось выполнить финальную проверку публикации.</p>
+<p>Avatar B includes:</p>
+<ul>
+<li>source reference;</li>
+<li>base still;</li>
+<li>realism still;</li>
+<li>ON1 settings;</li>
+<li>full comparison;</li>
+<li>crop comparison;</li>
+<li>color/tone statistics;</li>
+<li>still-image scoring;</li>
+<li>video test;</li>
+<li>video scoring.</li>
+</ul>
+<h2>15. Recommended Next Step</h2>
+<p>The next portfolio step should be a more commercial UGC case: a specific product, a tighter content script, and a short avatar-led product demonstration or routine.</p>
     </article>
   </main>
 </body>

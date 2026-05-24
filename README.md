@@ -1,10 +1,10 @@
 # AI UGC Avatar Realism Case
 
-Личный case study для проектирования и документирования pipeline повышения реалистичности AI-аватаров в beauty, skincare и men's grooming UGC-сценариях.
+Portfolio case study for a traceable AI-avatar realism workflow in beauty, skincare, and men's grooming UGC scenarios.
 
-Проект фокусируется на том, как сделать AI-generated avatar stills более пригодными для коротких UGC-style video tests через диагностику и улучшение реалистичности кожи, глаз, губ, волос и бороды до image-to-video генерации.
+The project shows how portrait stills can be prepared, improved, checked by facial zones, scored, and then tested as short image-to-video outputs.
 
-## Публичная версия
+## Live Case
 
 - GitHub Pages: https://dun4ev.github.io/ai-ugc-avatar-realism-case/
 - Repository: https://github.com/Dun4ev/ai-ugc-avatar-realism-case
@@ -19,28 +19,41 @@
 
 ![Avatar B crop comparison](08_site/assets/images/avatar_b_skincare_creator_crop_comparison_001.jpg)
 
-## Цели
+## What This Case Demonstrates
 
-- Создать два направления кейса: men's grooming и skincare routine creator.
-- Документировать character briefs, base avatar candidates, realism passes и visual defects.
-- Отслеживать важные эксперименты через CSV-логи.
-- Подготовить финальный Markdown и HTML-отчет для публикации как static case study.
-- Явно показывать limitations, failed experiments и права на источники.
+- A structured source-to-report pipeline for AI/UGC avatar realism.
+- Two public-reference avatars: men's grooming and skincare creator.
+- ON1 Photo RAW 2025 realism passes with saved settings.
+- Facial-zone crop analysis for skin, eyes, lips, hair/beard or hairline.
+- Manual scoring instead of fabricated automated claims.
+- Magnific / Kling 3.0 image-to-video tests.
+- A static HTML case study suitable for portfolio use.
 
-## Ожидаемые результаты
+## Results
 
-- Структурированный проектный репозиторий.
-- Character profiles в Markdown и JSON.
-- Base и improved avatar stills.
-- Crop-сравнения ключевых зон лица.
-- Короткие image-to-video tests.
-- Experiment logs в CSV.
-- Финальный `07_report/report.html`.
-- Publication-ready `08_site/index.html`.
+- Avatar A realism score: `4/5` overall.
+- Avatar B realism score: `4/5` overall.
+- Avatar A video score: `5/5` overall.
+- Avatar B video score: `5/5` overall.
 
-## Локальная настройка
+The current status is portfolio-grade case study, not a production avatar system.
 
-Создавать виртуальное окружение и ставить зависимости нужно только когда они реально понадобятся для скриптов:
+## Project Structure
+
+- `01_character_briefs/` - avatar profiles, prompts, and character notes.
+- `02_source_data/` - public source references and dataset register.
+- `03_base_avatars/` - selected base stills.
+- `04_realism_passes/` - improved stills and realism scoring log.
+- `05_video_tests/` - video input stills, prompts, outputs, and video scoring log.
+- `06_analysis/` - crop analysis, comparison grids, and color/tone statistics.
+- `07_report/` - Markdown and HTML report.
+- `08_site/` - published static site used by GitHub Pages.
+- `09_workflows/` - external tool notes and ON1 preset files.
+- `scripts/` - small Python utilities for validation, crops, grids, stats, and site build.
+
+## Local Setup
+
+Create a virtual environment only when you need to run the scripts:
 
 ```bash
 python3 -m venv .venv
@@ -49,38 +62,47 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Проверить текущий scaffold:
+Validate the project structure:
 
 ```bash
 python3 scripts/validate_project_structure.py
 ```
 
-Зарегистрировать исходные изображения после добавления файлов в `02_source_data/`:
+Build the static report and site:
+
+```bash
+python3 scripts/build_html_report.py
+```
+
+Outputs:
+
+- `07_report/report.html`
+- `08_site/index.html`
+
+## Useful Scripts
+
+Register source images:
 
 ```bash
 python3 scripts/register_dataset.py
 ```
 
-Создать contact sheet по зарегистрированным изображениям:
+Create a contact sheet:
 
 ```bash
 python3 scripts/make_contact_sheet.py
 ```
 
-В contact sheet попадают строки, где `allowed_for_public_report` равно `yes` или заполнено поле `use_case`.
-
-Создать comparison grid для base / realism / final изображений:
+Create a full-image comparison grid:
 
 ```bash
 python3 scripts/make_comparison_grid.py \
   --avatar-id avatar_a_mens_grooming \
-  --images path/to/base.jpg path/to/realism.jpg path/to/final.jpg \
-  --labels "Base avatar" "Realism pass" "Final still"
+  --images path/to/base.jpg path/to/realism.jpg \
+  --labels "Base" "Realism 001"
 ```
 
-Результат сохраняется в `06_analysis/comparison_grids/` и копируется в `07_report/assets/images/`. Существующий файл не перезаписывается без `--overwrite`.
-
-Извлечь crop-зоны лица для анализа realism:
+Extract face-zone crops:
 
 ```bash
 python3 scripts/extract_face_crops.py \
@@ -90,9 +112,7 @@ python3 scripts/extract_face_crops.py \
     04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg
 ```
 
-Результат сохраняется в `06_analysis/crops/<avatar_id>/` вместе с `crop_manifest.csv`.
-
-Создать crop comparison grid для оценки realism по зонам:
+Create a crop comparison grid:
 
 ```bash
 python3 scripts/make_crop_comparison_grid.py \
@@ -100,37 +120,27 @@ python3 scripts/make_crop_comparison_grid.py \
   --overwrite
 ```
 
-Результат сохраняется в `06_analysis/comparison_grids/` и копируется в `07_report/assets/images/`.
-
-ON1 Photo RAW 2025 settings для `realism_001`:
-
-- preset: `09_workflows/on1/avatar_a_realism_001_on1_photo_raw_2025.onp`
-- readable summary: `09_workflows/on1/on1_realism_001_settings_summary.md`
-
-Посчитать color/tone statistics по crop-файлам:
+Calculate simple color/tone statistics:
 
 ```bash
 python3 scripts/lab_color_stats.py \
   --avatar-id avatar_a_mens_grooming
 ```
 
-Результат сохраняется в `06_analysis/lab_color_stats/`.
+## Tools Used
 
-Собрать HTML-отчет и локальный static site:
+- ON1 Photo RAW 2025 for still-image realism passes.
+- Magnific with Kling 3.0 for image-to-video generation.
+- Python, Pillow, NumPy, CSV logs, and static HTML/CSS for analysis and reporting.
 
-```bash
-python3 scripts/build_html_report.py
-```
+## Limitations
 
-Результаты:
+- Visual scoring is manual and subjective.
+- Color/tone stats are RGB/HSV/luminance-based, not full LAB analysis.
+- The reference images are public Pexels images, not owned/private brand assets.
+- The project should not imply that the people in the reference images endorse any product or brand.
+- This is a case study and workflow prototype, not a commercial-ready production system.
 
-- `07_report/report.html`
-- `08_site/index.html`
+## Publication Notes
 
-## Правила проекта
-
-- Не перезаписывать исходные изображения.
-- Хранить source materials в `02_source_data/`.
-- Хранить generated outputs отдельно от исходников.
-- Не коммитить private images, API keys, model files или heavy raw media.
-- Не выдумывать результаты в отчетах. Ссылаться только на существующие файлы.
+The public report is in English. Some internal working notes may remain in Russian because they are not part of the portfolio-facing layer.

@@ -1,55 +1,76 @@
 # AI UGC Avatar Realism Pipeline for Beauty & Grooming Brands
 
-## 1. Цель
+## 1. Executive Summary
 
-Проверить управляемый workflow улучшения реалистичности AI/UGC portrait still для men's grooming кейса: от source reference и base still до realism pass, crop-проверки, scoring и подготовки материалов для будущего image-to-video теста.
+This case study documents a traceable workflow for improving and evaluating AI/UGC avatar realism for beauty, skincare, and men's grooming content.
 
-## 2. Почему этот кейс важен
+The project includes:
 
-Для UGC-style avatar content недостаточно получить визуально приятный portrait. Перед image-to-video важно отдельно проверить зоны, которые чаще всего ломают реализм:
+- 2 avatar tracks: men's grooming and skincare creator.
+- 2 ON1 Photo RAW 2025 realism passes.
+- Face-zone crop comparison for skin, eyes, lips, and hair/beard or hairline.
+- Manual realism scoring on a 1-5 scale.
+- 2 image-to-video tests generated with Magnific / Kling 3.0.
+- A published static HTML case study.
 
-- кожа;
-- глаза;
-- губы;
-- волосы и борода;
+The goal is not to claim a production-ready avatar system. The goal is to show a structured, inspectable process for avatar realism evaluation.
+
+## 2. Why This Case Matters
+
+UGC-style AI avatars often look convincing in a full-frame still but fail in specific face zones or during motion. Before moving to image-to-video, the following areas need separate inspection:
+
+- skin texture;
+- eyes;
+- lips;
+- hair, beard, or hairline;
 - identity consistency.
 
-Цель этого проекта — показать не только финальную картинку, но и контролируемый pipeline: source tracking, tool settings, crop comparison, scoring и limitations.
+This project focuses on the workflow: source tracking, tool settings, crop comparison, manual scoring, video tests, and honest limitations.
 
-## 3. Целевая ниша
+## 3. Target Use Cases
 
-Первый рабочий трек:
+### Avatar A: Men's Grooming Advisor
 
-- Avatar A: Men's Grooming Advisor
-- Niche: men's grooming
-- Use cases: face wash, beard care, moisturizer, shaving, fragrance/body care
+- Niche: men's grooming.
+- Example use cases: face wash, beard care, moisturizer, shaving, fragrance, body care.
 
-Avatar B для skincare routine creator добавлен на уровне source/base, первого ON1 realism pass и user scoring.
+### Avatar B: Skincare Routine Creator
 
-## 4. Метод
+- Niche: skincare and beauty UGC.
+- Example use cases: skincare routine, moisturizer, cleanser, serum, beauty education.
 
-Текущий pipeline:
+## 4. Method
 
-1. Source reference из Pexels.
-2. Base still в `03_base_avatars/`.
-3. Realism pass через ON1 Photo RAW 2025.
-4. Full image comparison grid.
-5. Crop extraction по зонам лица.
-6. Crop comparison grid.
-7. User visual scoring по шкале 1-5.
+The workflow used in this case:
 
-Avatar A и Avatar B уже прошли шаги до user visual scoring.
+1. Track public source references and license notes.
+2. Select a base avatar still.
+3. Create a realism pass with ON1 Photo RAW 2025.
+4. Generate full-image comparison grids.
+5. Extract face-zone crops.
+6. Generate crop comparison grids.
+7. Score realism manually on a 1-5 scale.
+8. Prepare image-to-video prompts and input stills.
+9. Generate short video tests with Magnific / Kling 3.0.
+10. Score video stability manually on a 1-5 scale.
 
-## 5. Источник изображения
+## 5. Source References and License Notes
 
-Source reference:
+### Avatar A
 
 - File: `02_source_data/public_references/pexels_unsplash/mens_grooming_pexels_001.jpg`
 - Source: Pexels
 - Source URL: https://www.pexels.com/ru-ru/photo/11772165/
 - License note: Pexels license checked on 2026-05-20.
 
-Pexels позволяет бесплатное использование и модификацию фото; attribution is not required but appreciated. Важное ограничение: нельзя использовать человека на фото так, будто он endorses продукт или бренд.
+### Avatar B
+
+- File: `02_source_data/public_references/pexels_unsplash/skincare_creator_pexels_001.jpg`
+- Source: Pexels
+- Source URL: https://www.pexels.com/ru-ru/photo/4575002/
+- License note: Pexels license checked on 2026-05-20.
+
+Important limitation: the people in the reference images should not be presented as endorsing any product, brand, or service.
 
 ## 6. Avatar A: Men's Grooming Advisor
 
@@ -67,13 +88,11 @@ Realism output:
 
 - `04_realism_passes/avatar_a_mens_grooming/final_stills/final_realism_001.jpg`
 
-Tool:
+Tooling:
 
-- ON1 Photo RAW 2025
+- Tool: ON1 Photo RAW 2025
 - Settings file: `09_workflows/on1/avatar_a_realism_001_on1_photo_raw_2025.onp`
 - Readable settings summary: `09_workflows/on1/on1_realism_001_settings_summary.md`
-
-Key readable ON1 settings include Brilliance AI - Люди, increased structure/clarity, mild vibrance/color/tone adjustments, reduced highlights/whites and small exposure/contrast corrections.
 
 ## 7. Avatar B: Skincare Routine Creator
 
@@ -83,47 +102,31 @@ Character files:
 - `01_character_briefs/avatar_b_skincare_creator/character_profile.json`
 - `01_character_briefs/avatar_b_skincare_creator/prompt_history.md`
 
-Source reference:
-
-- File: `02_source_data/public_references/pexels_unsplash/skincare_creator_pexels_001.jpg`
-- Source: Pexels
-- Source URL: https://www.pexels.com/ru-ru/photo/4575002/
-- License note: Pexels license checked on 2026-05-20.
-
 Base avatar:
 
 - `03_base_avatars/avatar_b_skincare_creator/selected/base.jpg`
-
-Current status:
-
-- source/base stage complete;
-- realism pass 001 complete;
-- crop analysis complete;
-- scoring complete.
 
 Realism output:
 
 - `04_realism_passes/avatar_b_skincare_creator/final_stills/final_realism_001.jpg`
 
-Tool:
+Tooling:
 
-- ON1 Photo RAW 2025
+- Tool: ON1 Photo RAW 2025
 - Settings file: `09_workflows/on1/avatar_b_realism_001_on1_photo_raw_2025.onp`
 - Readable settings summary: `09_workflows/on1/on1_avatar_b_realism_001_settings_summary.md`
 
-Key readable ON1 settings include Brilliance AI - Люди, increased exposure, reduced dehaze, noise reduction, enabled auto tone/color and reduced highlights/whites.
+## 8. Visual Comparison
 
-## 8. Visual comparison
-
-Full image comparison:
+Avatar A full-image comparison:
 
 ![Avatar A base vs realism](assets/images/avatar_a_mens_grooming_base_vs_realism_001.jpg)
 
-Crop comparison:
+Avatar A crop comparison:
 
 ![Avatar A crop comparison](assets/images/avatar_a_mens_grooming_crop_comparison_001.jpg)
 
-Avatar B full image comparison:
+Avatar B full-image comparison:
 
 ![Avatar B base vs realism](assets/images/avatar_b_skincare_creator_base_vs_realism_001.jpg)
 
@@ -139,63 +142,50 @@ Crop zones:
 - `lips`
 - `hair_beard`
 
-Crop manifests:
+For Avatar B, the `hair_beard` zone is used as a shared scoring column and represents hair/hairline.
 
-- `06_analysis/crops/avatar_a_mens_grooming/crop_manifest.csv`
-- `06_analysis/crops/avatar_b_skincare_creator/crop_manifest.csv`
+## 9. Still-Image Realism Scoring
 
-## 9. Scoring
+Scoring source: manual visual review after crop correction and crop comparison.
 
 ### Avatar A
 
-Scoring source: user visual review after crop correction.
-
 | Metric | Score | Notes |
 |---|---:|---|
-| skin_realism | 4 | Кожа стала достаточно хорошей для case draft. |
-| eye_realism | 3 | Глаза приемлемы, но не strongest improvement area. |
-| lips_realism | 4 | Губы оценены как хорошие для case draft. |
-| hair_beard_realism | 3 | Борода приемлема, но требует дальнейшего улучшения. |
-| identity_consistency | 5 | Личность сохранена очень хорошо. |
-| overall_score | 4 | Realism pass принят для черновика кейса. |
+| skin_realism | 4 | Skin is strong enough for a case-study draft. |
+| eye_realism | 3 | Eyes are acceptable but remain a potential improvement area. |
+| lips_realism | 4 | Lips are strong enough for a case-study draft. |
+| hair_beard_realism | 3 | Beard is acceptable but can be improved in a second pass. |
+| identity_consistency | 5 | Identity is preserved very well. |
+| overall_score | 4 | Accepted for the case-study draft. |
 
-CSV log:
-
-- `04_realism_passes/realism_run_log.csv`
-
-Verdict:
-
-`realism_001` принят как `accepted_for_case_draft`.
+Verdict: `accepted_for_case_draft`
 
 ### Avatar B
 
-Scoring source: user visual review after crop comparison.
-
 | Metric | Score | Notes |
 |---|---:|---|
-| skin_realism | 4 | Кожа оценена как хорошая для case draft. |
-| eye_realism | 5 | Глаза — самая сильная зона текущего pass. |
-| lips_realism | 4 | Губы оценены как хорошие для case draft. |
-| hair_beard_realism | 4 | Для Avatar B это hair/hairline зона, колонка оставлена общей для CSV. |
-| identity_consistency | 4 | Личность сохранена хорошо. |
-| overall_score | 4 | Realism pass принят для черновика кейса. |
+| skin_realism | 4 | Skin is strong enough for a case-study draft. |
+| eye_realism | 5 | Eyes are the strongest area of this pass. |
+| lips_realism | 4 | Lips are strong enough for a case-study draft. |
+| hair_beard_realism | 4 | For this avatar, this represents hair/hairline. |
+| identity_consistency | 4 | Identity is preserved well. |
+| overall_score | 4 | Accepted for the case-study draft. |
+
+Verdict: `accepted_for_case_draft`
 
 CSV log:
 
 - `04_realism_passes/realism_run_log.csv`
 
-Verdict:
+## 10. Color and Tone Statistics
 
-`avatar_b_realism_001` принят как `accepted_for_case_draft`.
-
-## 10. Color / tone statistics
-
-Stats file:
+Stats files:
 
 - `06_analysis/lab_color_stats/avatar_a_mens_grooming_color_stats.csv`
 - `06_analysis/lab_color_stats/avatar_b_skincare_creator_color_stats.csv`
 
-Краткое наблюдение: `final_realism_001` стал немного темнее во всех crop-зонах, при этом saturation немного выросла почти везде.
+Avatar A: `final_realism_001` became slightly darker across all crop zones, while saturation increased slightly in most zones.
 
 | Zone | Luminance delta | Saturation delta | Chroma proxy delta |
 |---|---:|---:|---:|
@@ -205,9 +195,7 @@ Stats file:
 | skin_cheeks | -0.0224 | +0.0124 | +0.0018 |
 | skin_forehead | -0.0342 | +0.0175 | +0.0042 |
 
-Ограничение: это RGB/HSV/luminance statistics, а не полноценный LAB analysis. Таблица показывает color/tone shift, но не заменяет visual scoring.
-
-Для Avatar B `final_realism_001` стал светлее и насыщеннее во всех crop-зонах.
+Avatar B: `final_realism_001` became brighter and more saturated across all crop zones.
 
 | Zone | Luminance delta | Saturation delta | Chroma proxy delta |
 |---|---:|---:|---:|
@@ -217,29 +205,17 @@ Stats file:
 | skin_cheeks | +0.0317 | +0.0479 | +0.0681 |
 | skin_forehead | +0.0288 | +0.0493 | +0.0649 |
 
-## 11. Что сработало
+Limitation: these are RGB/HSV/luminance statistics, not a full LAB analysis. They help identify color and tone shifts but do not replace visual scoring.
 
-- Source image теперь отслеживается через `dataset_register.csv`.
-- Pexels URL и license note добавлены.
-- ON1 preset сохранен как workflow artifact.
-- Crop extraction позволяет оценивать не только full image, но и отдельные зоны лица.
-- Crop comparison grid удобна для scoring и будущего отчета.
-- Identity consistency высокая: итоговый still сохраняет исходное лицо.
-- Avatar B source/base trail создан.
-- Avatar B ON1 realism pass, comparison grid, crop grid и color/tone stats созданы.
+## 11. Video Tests
 
-## 12. Что пока не сработало / ограничения
+Image-to-video tool:
 
-- Точный visual improvement не автоматизирован; scoring пока ручной.
-- Eyes и hair/beard получили score `3`, значит эти зоны остаются кандидатами на следующий realism pass.
-- Image-to-video outputs добавлены и получили user scoring.
-- Для обоих аватаров есть realism scoring и video scoring.
-- Нет полноценного LAB analysis; текущая таблица использует RGB/HSV/luminance statistics.
-- Не нужно утверждать, что этот результат commercial-ready; текущий статус — case draft.
+- Platform: Magnific
+- Model: Kling 3.0
+- Website: `www.magnific.com`
 
-## 13. Video tests
-
-Подготовлены входные файлы для короткого image-to-video теста:
+Prepared inputs:
 
 | Video run | Avatar | Input still | Prompt | Status |
 |---|---|---|---|---|
@@ -266,17 +242,28 @@ Video scoring:
 | avatar_a_video_001 | 5 | 5 | 5 | 5 | 5 | 5 | accepted_for_case_draft |
 | avatar_b_video_001 | 5 | 5 | 5 | 5 | 5 | 5 | accepted_for_case_draft |
 
-Инструмент генерации: Magnific, модель Kling 3.0, `www.magnific.com`.
+## 12. What Worked
 
-## 14. Следующие шаги
+- Source images are tracked through `dataset_register.csv`.
+- Pexels URLs and license notes are documented.
+- ON1 settings are saved as workflow artifacts.
+- Crop extraction made it possible to inspect specific face zones instead of relying only on full-frame impressions.
+- Crop comparison grids made manual scoring easier and more transparent.
+- Both video outputs were accepted for the case-study draft.
 
-1. При необходимости сделать второй realism pass для Avatar A: focus on eyes and beard.
-2. При необходимости сделать второй realism pass для Avatar B: focus on skin texture balance and identity consistency.
-3. Выполнить финальную проверку публикации.
+## 13. Limitations
 
-## 15. Текущий статус
+- The scoring is manual and subjective.
+- The color/tone analysis is simple RGB/HSV/luminance analysis, not a full LAB workflow.
+- Avatar A eyes and beard scored lower than other areas, so they remain candidates for a second realism pass.
+- The case should not be described as a commercial-ready avatar system.
+- The source portraits are public references; they should not be used to imply endorsement by the people shown.
 
-Avatar A имеет полный минимальный case trail:
+## 14. Current Status
+
+This project is complete as a portfolio-grade case study.
+
+Avatar A includes:
 
 - source reference;
 - base still;
@@ -284,9 +271,23 @@ Avatar A имеет полный минимальный case trail:
 - ON1 settings;
 - full comparison;
 - crop comparison;
-- scoring;
-- limitations.
+- still-image scoring;
+- video test;
+- video scoring.
 
-Avatar B имеет source/base trail, ON1 realism pass, comparison/crop artifacts, color/tone stats и visual scoring.
+Avatar B includes:
 
-Этого достаточно для расширенного черновика отчета. Для финальной публикации осталось выполнить финальную проверку публикации.
+- source reference;
+- base still;
+- realism still;
+- ON1 settings;
+- full comparison;
+- crop comparison;
+- color/tone statistics;
+- still-image scoring;
+- video test;
+- video scoring.
+
+## 15. Recommended Next Step
+
+The next portfolio step should be a more commercial UGC case: a specific product, a tighter content script, and a short avatar-led product demonstration or routine.
