@@ -9,6 +9,16 @@
 - GitHub Pages: https://dun4ev.github.io/ai-ugc-avatar-realism-case/
 - Repository: https://github.com/Dun4ev/ai-ugc-avatar-realism-case
 
+## Preview
+
+### Avatar A: men's grooming realism pass
+
+![Avatar A base vs realism](08_site/assets/images/avatar_a_mens_grooming_base_vs_realism_001.jpg)
+
+### Avatar B: skincare creator crop comparison
+
+![Avatar B crop comparison](08_site/assets/images/avatar_b_skincare_creator_crop_comparison_001.jpg)
+
 ## Цели
 
 - Создать два направления кейса: men's grooming и skincare routine creator.
